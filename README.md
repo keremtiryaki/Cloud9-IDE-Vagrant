@@ -17,7 +17,15 @@ Feel free to fork it, use it, open issues or requests
 
 Quick start
 ---
-install vagrant and run
-`vagrant up `
+- install vagrant 
+- install ansible
+- vagrant plugin install vagrant-triggers
+
+and run
+`vagrant up`
+
 once it is up you can open the 
-`C9-Mac-App-build/C9-Mac-App.app` to use ide.
+
+`C9-Mac-App-build/C9-Mac-App.app` 
+
+to use ide.
