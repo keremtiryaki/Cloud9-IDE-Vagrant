@@ -1,0 +1,9 @@
+---
+- hosts: ide_group
+  sudo: yes
+  gather_facts: no
+  roles:
+  - ansible
+  - git
+  - nodejs
+  - cloud9

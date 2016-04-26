@@ -1,0 +1,12 @@
+---
+- name: Ensure software-properties-common is installed
+  apt: name=software-properties-common state=present
+
+- name: add ansbile repo
+  apt_repository: repo='ppa:ansible/ansible' state=present
+
+- name: update apt-get
+  apt: update_cache=yes
+
+- name: Ensure ansbile is installed
+  apt: name=ansible state=present

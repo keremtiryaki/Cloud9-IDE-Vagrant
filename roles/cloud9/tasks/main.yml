@@ -1,0 +1,17 @@
+---
+- name: Ensure g++ is installed
+  apt: name=g++ state=present
+  
+- name: clone cloud9 core
+  git: repo=https://github.com/c9/core.git dest=/home/vagrant/Cloud9IDE
+
+- name: install cloud 9
+  shell: /home/vagrant/Cloud9IDE/scripts/install-sdk.sh
+  args:
+    creates: /root/.c9/installed
+
+- name: copy c9 user settings
+  template: src=c9.user.settings.j2 dest=/root/.c9/user.settings
+
+- name: run c9 with forever
+  command: "/usr/bin/forever start /home/vagrant/Cloud9IDE/server.js -p 8181 -l 0.0.0.0 -a : -w '/vagrant/workspace'"

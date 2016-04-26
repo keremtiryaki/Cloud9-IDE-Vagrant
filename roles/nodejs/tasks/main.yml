@@ -1,0 +1,12 @@
+---
+- name: Install ansbile nodejs role with Ansible Galaxy
+  command: ansible-galaxy install nodesource.node
+
+- name: copy ansible role template
+  template: src=node-installler-role.yml.j2 dest=/tmp/node-installler-role.yml
+
+- name: Install nodejs with role
+  command: /usr/bin/ansible-playbook /tmp/node-installler-role.yml
+
+- name: Install npm forever -global
+  npm: name=forever global=yes

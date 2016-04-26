@@ -1,0 +1,12 @@
+ide ansible_ssh_host=10.0.0.222
+
+[ide_group]
+ide
+
+[datacenter:children]
+ide_group
+
+
+[datacenter:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
