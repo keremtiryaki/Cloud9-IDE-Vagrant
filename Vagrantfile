@@ -39,4 +39,13 @@ Vagrant.configure(2) do |config|
 
   end
 
+  #config.vm.define "docker_ide" do |docker_ide|  
+  #  docker_ide.vm.provider "docker" do |d|
+  #    d.image = "ubuntu:trusty"
+  #  end
+  #  docker_ide.ssh.insert_key = false
+  #  docker_ide.ssh.username = 'docker'
+  #  docker_ide.ssh.password = 'tcuser' 
+  #end
+
 end
