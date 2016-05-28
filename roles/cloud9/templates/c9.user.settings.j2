@@ -2,7 +2,7 @@
     "ace": {
         "@animatedScroll": "true",
         "@antialiasedfonts": "false",
-        "@behavioursEnabled": "true",
+        "@behavioursEnabled": true,
         "@cursorStyle": "ace",
         "@displayIndentGuides": "true",
         "@fadeFoldWidgets": "true",
@@ -22,7 +22,7 @@
         "@showGutter": true,
         "@showInvisibles": false,
         "@showPrintMargin": "true",
-        "@theme": "ace/theme/cloud9_night_low_color",
+        "@theme": "ace/theme/cloud9_night",
         "@useWrapMode": "false",
         "@wrapBehavioursEnabled": false,
         "@wrapToView": "true",
@@ -89,6 +89,9 @@
     },
     "imgeditor": {
         "@smooth": false
+    },
+    "installer": {
+        "@auto": false
     },
     "key-bindings": {
         "@platform": "auto",
@@ -259,6 +262,14 @@
                 "keys": {
                     "mac": [
                         "Cmd-Shift-/"
+                    ]
+                }
+            },
+            {
+                "command": "jumptodef",
+                "keys": {
+                    "mac": [
+                        "Cmd-Shift-G"
                     ]
                 }
             }
